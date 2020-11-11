@@ -9,7 +9,8 @@ var app = new Vue (
                 'Frutta',
                 'Detersivi',
                 'Carne'
-            ]
+            ],
+            placeholderList: 'cosa manca?'
         },
     }
 );
