@@ -11,12 +11,16 @@ var app = new Vue (
                 'Carne'
             ],
             placeholderList: 'Cosa manca?',
-            newItem: ''
+            newItem: '',
+            button: 'Aggiungi'
         },
         methods: {
-            addItem(){
+            addItem() {
                 this.shoppingList.push(this.newItem);
                 this.newItem = '';
+            },
+            removeItem(index) {
+                this.$delete(this.shoppingList, index)
             }
         }
     }
