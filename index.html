@@ -4,16 +4,18 @@
         <meta charset="utf-8">
         <title>todolist</title>
         <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     </head>
     <body>
         <div class="container">
             <div id="root">
                 <h1 id="title">{{ title }}</h1>
-                <input type="text" v-model='newItem' :placeholder="placeholderList" v-on:keyup.13="addItem()">
-                <button @click='addItem()' type="button" name="button">{{ button }}</button>
+                <input id="items-to-add" type="text" v-model='newItem' :placeholder="placeholderList" v-on:keyup.13="addItem()">
+                <button id="add" @click='addItem()' type="button" name="button">{{ button }}</button>
                 <ul>
-                    <li v-for='(element, index) in shoppingList' @click='removeItem(index)'>{{ element }}</li>
+                    <li v-for='(element, index) in shoppingList' @click='removeItem(index)'><i class="far fa-check-square"></i>{{ element }}</li>
                 </ul>
             </div>
         </div>
