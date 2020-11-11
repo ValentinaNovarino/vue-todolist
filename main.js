@@ -10,7 +10,14 @@ var app = new Vue (
                 'Detersivi',
                 'Carne'
             ],
-            placeholderList: 'cosa manca?'
+            placeholderList: 'Cosa manca?',
+            newItem: ''
         },
+        methods: {
+            addItem(){
+                this.shoppingList.push(this.newItem);
+                this.newItem = '';
+            }
+        }
     }
 );

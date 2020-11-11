@@ -10,7 +10,8 @@
         <div class="container">
             <div id="root">
                 <h1 id="title">{{ title }}</h1>
-                <input type="text" :placeholder="placeholderList">
+                <input type="text" v-model='newItem' :placeholder="placeholderList">
+                <button @click='addItem()' type="button" name="button">Aggiungi</button>
                 <ul>
                     <li v-for='element in shoppingList'>{{ element }}</li>
                 </ul>
