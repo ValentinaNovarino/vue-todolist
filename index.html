@@ -10,7 +10,7 @@
         <div class="container">
             <div id="root">
                 <h1 id="title">{{ title }}</h1>
-                <input type="text" v-model='newItem' :placeholder="placeholderList">
+                <input type="text" v-model='newItem' :placeholder="placeholderList" v-on:keyup.13="addItem()">
                 <button @click='addItem()' type="button" name="button">{{ button }}</button>
                 <ul>
                     <li v-for='(element, index) in shoppingList' @click='removeItem(index)'>{{ element }}</li>
